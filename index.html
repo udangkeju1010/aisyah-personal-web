@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | High School Student & Aspiring Web Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header dengan sambutan dan karakter -->
+        <header class="header">
+            <div class="header-content">
+                <div class="text-content">
+                    <h1 class="greeting">Hello, welcome to <span class="highlight">Aisyah's Portfolio</span></h1>
+                    <p class="tagline">High School Student | Formula 1 Anthusias</p>
+                    <div class="welcome-message">
+                        <p>A passionate high school student who loves learning, exploring new ideas, and making connections. I believe in balancing academic excellence with personal growth through extracurricular activities.</p>
+						 <p>My interests include technology, science, and community service. I enjoy problem-solving and working in teams to achieve common goals.</p>
+                    </div>
+                    <div class="motto-container">
+                        <h3 class="motto-label">My Motto:</h3>
+                        <p class="motto" id="motto-text">"Make your own luck!"</p>
+                        <button class="edit-btn" id="edit-motto">
+                            <i class="fas fa-edit"></i> Edit Motto
+                        </button>
+                    </div>
+                    <div class="social-media">
+                        <h3 class="social-label">Connect with me:</h3>
+                        <div class="social-icons" id="social-icons-container">
+                            <!-- Social media icons akan ditambahkan via JavaScript -->
+                        </div>
+                        <button class="edit-btn" id="edit-social">
+                            <i class="fas fa-plus"></i> Add Social Media
+                        </button>
+                    </div>
+                </div>
+                <div class="visual-content">
+                    <div class="profile-image-container">
+                        <div class="profile-frame">
+                            <img src="https://vui.unsplash.com/resize?height=256&quality=60&type=auto&url=https%3A%2F%2Fsearched-images.s3.us-west-2.amazonaws.com%2Fbf2928d5-a8fb-4fa4-b238-e891ad4e7e64%3FX-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DAKIAQ4GRIA4QTG2PSHUB%252F20260128%252Fus-west-2%252Fs3%252Faws4_request%26X-Amz-Date%3D20260128T030900Z%26X-Amz-Expires%3D86400%26X-Amz-SignedHeaders%3Dhost%26X-Amz-Signature%3D108d5d5094253b2796fa17b6582dd4b1dcd98fb057b47491fc8a1c900257a8a7&sign=tVRuHVtea7pUclBVGteGC8mmyrnVAVNVIv9xKV6K4kE
+" 
+                                 alt="Profile Picture" 
+                                 class="profile-image" 
+                                 id="profile-image"
+                                 onerror="this.onerror=null; this.src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png';">
+                            <button class="edit-btn image-edit-btn" id="edit-image">
+                                <i class="fas fa-camera"></i> Change Photo
+                            </button>
+                        </div>
+                    </div>
+                    <div class="character-container">
+                        <div class="roblox-character">
+                            <div class="roblox-hair"></div>
+                            <div class="roblox-face">
+                                <div class="roblox-eye left"></div>
+                                <div class="roblox-eye right"></div>
+                                <div class="roblox-smile"></div>
+                            </div>
+                            <div class="roblox-body">
+                                <div class="engineer-jacket"></div>
+                                <div class="tool-belt">
+                                    <div class="tool wrench"></div>
+                                    <div class="tool screwdriver"></div>
+                                </div>
+                            </div>
+                            <div class="mechanical-elements">
+                                <div class="floating-gear gear-1"></div>
+                                <div class="floating-gear gear-2"></div>
+                                <div class="floating-gear gear-3"></div>
+                            </div>
+                        </div>
+                        <p class="character-caption">A future engineer!</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main content dengan tab navigasi -->
+        <main class="main-content">
+            <nav class="tab-navigation">
+                <button class="tab-btn active" data-tab="personal">Personal Info</button>
+                <button class="tab-btn" data-tab="education">Education</button>
+                <button class="tab-btn" data-tab="experience">Experience</button>
+                <button class="tab-btn" data-tab="organization">Organization</button>
+                <button class="tab-btn" data-tab="achievement">Achievements</button>
+                <button class="tab-btn" data-tab="skills">Skills</button>
+                <button class="tab-btn" data-tab="interests">My Interests</button>
+            </nav>
+
+            <div class="tab-content">
+                <!-- Personal Info Tab -->
+                <div class="tab-pane active" id="personal-tab">
+                    <h2 class="tab-title">Personal Information</h2>
+                    <div class="editable-section" id="personal-info">
+                        <div class="info-item">
+                            <span class="info-label">Full Name:</span>
+                            <span class="info-value" id="full-name">Siti Aisyah Sunarsih Handoyo</span>
+                            <button class="inline-edit-btn" data-field="full-name"><i class="fas fa-edit"></i></button>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Status:</span>
+                            <span class="info-value" id="status">High School Student (Grade 12)</span>
+                            <button class="inline-edit-btn" data-field="status"><i class="fas fa-edit"></i></button>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">School:</span>
+                            <span class="info-value" id="school">SMA Negeri 1 Magetan</span>
+                            <button class="inline-edit-btn" data-field="school"><i class="fas fa-edit"></i></button>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Major:</span>
+                            <span class="info-value" id="major">Engineering Science</span>
+                            <button class="inline-edit-btn" data-field="major"><i class="fas fa-edit"></i></button>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Birth Date:</span>
+                            <span class="info-value" id="birth-date">December, 2007</span>
+                            <button class="inline-edit-btn" data-field="birth-date"><i class="fas fa-edit"></i></button>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email:</span>
+                            <span class="info-value" id="email">as4390306@gmail.com</span>
+                            <button class="inline-edit-btn" data-field="email"><i class="fas fa-edit"></i></button>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Phone:</span>
+                            <span class="info-value" id="phone">+62 812-2590-4486</span>
+                            <button class="inline-edit-btn" data-field="phone"><i class="fas fa-edit"></i></button>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Location:</span>
+                            <span class="info-value" id="location">Magetan, East Java, Indonesia</span>
+                            <button class="inline-edit-btn" data-field="location"><i class="fas fa-edit"></i></button>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Hobbies:</span>
+                            <span class="info-value" id="hobbies">Watch F1, Reading, Writting, Listen to hip hop music</span>
+                            <button class="inline-edit-btn" data-field="hobbies"><i class="fas fa-edit"></i></button>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">About Me:</span>
+                            <p class="info-value about-text" id="about-text">Hello! I'm Aisyah, a 18-year-old high school student with big dreams in technology. My goal is to study Mechanical engineer in Sepuluh Nopember Institute Technology and eventually become a power unit engineer in Mercedes AMG at Formula 1. I believe in balancing academic excellence with personal growth through extracurricular activities.!</p>
+                            <button class="inline-edit-btn" data-field="about-text"><i class="fas fa-edit"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Tab -->
+                <div class="tab-pane" id="education-tab">
+                    <h2 class="tab-title">Education History</h2>
+                    <button class="add-btn" id="add-education"><i class="fas fa-plus"></i> Add Education</button>
+                    <div class="timeline" id="education-timeline">
+                        <!-- Education items akan ditambahkan via JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Experience Tab -->
+                <div class="tab-pane" id="experience-tab">
+                    <h2 class="tab-title">Experience & Projects</h2>
+                    <button class="add-btn" id="add-experience"><i class="fas fa-plus"></i> Add Experience</button>
+                    <div class="timeline" id="experience-timeline">
+                        <!-- Experience items akan ditambahkan via JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Organization Tab -->
+                <div class="tab-pane" id="organization-tab">
+                    <h2 class="tab-title">Organization Experience</h2>
+                    <button class="add-btn" id="add-organization"><i class="fas fa-plus"></i> Add Organization</button>
+                    <div class="cards-container" id="organization-cards">
+                        <!-- Organization cards akan ditambahkan via JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Achievements Tab -->
+                <div class="tab-pane" id="achievement-tab">
+                    <h2 class="tab-title">Achievements & Awards</h2>
+                    <button class="add-btn" id="add-achievement"><i class="fas fa-plus"></i> Add Achievement</button>
+                    <div class="cards-container" id="achievement-cards">
+                        <!-- Achievement cards akan ditambahkan via JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Skills Tab -->
+                <div class="tab-pane" id="skills-tab">
+                    <h2 class="tab-title">Technical Skills</h2>
+                    <button class="add-btn" id="add-skill"><i class="fas fa-plus"></i> Add Skill</button>
+                    <div class="skills-container" id="skills-list">
+                        <!-- Skills akan ditambahkan via JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Interests Tab -->
+                <div class="tab-pane" id="interests-tab">
+                    <h2 class="tab-title">My Interests & Inspirations</h2>
+                    <div class="editable-section">
+                        <div class="interests-container">
+                            <div class="interest-category">
+                                <h3><i class="fas fa-heart"></i> Role Models & Idols</h3>
+                                <div class="interest-item">
+                                    <span class="interest-label">Tech Inspiration:</span>
+                                    <span class="interest-value" id="tech-inspiration">Margaret Hamilton - NASA's lead software engineer for Apollo missions</span>
+                                    <button class="inline-edit-btn" data-field="tech-inspiration"><i class="fas fa-edit"></i></button>
+                                </div>
+                                <div class="interest-item">
+                                    <span class="interest-label">Favorite Quote:</span>
+                                    <span class="interest-value" id="inspiration-quote">"Don't let anyone rob you of your imagination, your creativity, or your curiosity. It's your place in the world; it's your life. Go on and do all you can with it, and make it the life you want to live." - Mae Jemison</span>
+                                    <button class="inline-edit-btn" data-field="inspiration-quote"><i class="fas fa-edit"></i></button>
+                                </div>
+                                <div class="interest-item">
+                                    <span class="interest-label">Current Idol:</span>
+                                    <span class="interest-value" id="current-idol">Mark Zuckerberg - Started programming in middle school and built Facebook in college</span>
+                                    <button class="inline-edit-btn" data-field="current-idol"><i class="fas fa-edit"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="interest-category">
+                                <h3><i class="fas fa-laptop-code"></i> Tech Interests</h3>
+                                <div class="interest-item">
+                                    <span class="interest-label">Favorite Tech:</span>
+                                    <span class="interest-value" id="fav-tech">Web Development, UI/UX Design, Robotics, Mobile Apps</span>
+                                    <button class="inline-edit-btn" data-field="fav-tech"><i class="fas fa-edit"></i></button>
+                                </div>
+                                <div class="interest-item">
+                                    <span class="interest-label">Learning Now:</span>
+                                    <span class="interest-value" id="learning-now">JavaScript Frameworks (React), Python for automation</span>
+                                    <button class="inline-edit-btn" data-field="learning-now"><i class="fas fa-edit"></i></button>
+                                </div>
+                                <div class="interest-item">
+                                    <span class="interest-label">Dream Project:</span>
+                                    <span class="interest-value" id="dream-project">Build an educational app for Indonesian students to learn coding interactively</span>
+                                    <button class="inline-edit-btn" data-field="dream-project"><i class="fas fa-edit"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="interest-category">
+                                <h3><i class="fas fa-gamepad"></i> Personal Favorites</h3>
+                                <div class="interest-item">
+                                    <span class="interest-label">Favorite Games:</span>
+                                    <span class="interest-value" id="fav-games">Roblox (engineering games!), Minecraft (redstone circuits), Coding games on Code.org</span>
+                                    <button class="inline-edit-btn" data-field="fav-games"><i class="fas fa-edit"></i></button>
+                                </div>
+                                <div class="interest-item">
+                                    <span class="interest-label">YouTube Channels:</span>
+                                    <span class="interest-value" id="youtube-channels">Web Dev Simplified, Fireship, Indonesian Tech Vloggers</span>
+                                    <button class="inline-edit-btn" data-field="youtube-channels"><i class="fas fa-edit"></i></button>
+                                </div>
+                                <div class="interest-item">
+                                    <span class="interest-label">Life Motto:</span>
+                                    <span class="interest-value" id="life-motto">"Code what you dream, build what you imagine"</span>
+                                    <button class="inline-edit-btn" data-field="life-motto"><i class="fas fa-edit"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Modal untuk edit data -->
+        <div class="modal" id="edit-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modal-title">Edit Field</h3>
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="edit-input" id="modal-label">Value:</label>
+                        <textarea id="edit-input" rows="3"></textarea>
+                        <input type="text" id="edit-input-text" class="hidden">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" id="cancel-edit">Cancel</button>
+                    <button class="btn-primary" id="save-edit">Save Changes</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal untuk tambah data -->
+        <div class="modal" id="add-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="add-modal-title">Add New Item</h3>
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="add-form-content">
+                        <!-- Form akan diisi via JavaScript berdasarkan jenis data -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" id="cancel-add">Cancel</button>
+                    <button class="btn-primary" id="save-add">Add Item</button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>© <span id="current-year">2023</span> Aisyah's Portfolio - High School Student & Aspiring Web Engineer.</p>
+            <p class="footer-note">This portfolio is fully interactive - click edit buttons to customize all content!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
